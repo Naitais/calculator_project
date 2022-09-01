@@ -12,6 +12,7 @@ html,body{
     align-items: center;
     flex-direction: column;
     font-family: serif;
+    font-size: 40px;
     justify-content: center;
 }
 
@@ -21,10 +22,11 @@ html,body{
     background-color: blueviolet;
     display: flex;
     flex-direction: column;
-
+    border-radius: 5px;
 }
 
 #displayCon{
+    border-radius: 5px;
     background-color: azure;
     height: 150px;
     margin: 25px 25px 20px 25px;
@@ -34,10 +36,12 @@ html,body{
 .button{
     height: 60px;
     width: 85px;
+    border-radius: 10px;
+    background-color: aquamarine;
 }
 
 #zeroButton{
-    width: 174px;
+    width: 180px;
 }
 
 #buttonsCon{
@@ -45,4 +49,70 @@ html,body{
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    
+}
+
+#memeButton{
+    color: aliceblue;
+    text-align: center;
+    animation: rainbow-bg 4s linear;
+	animation-iteration-count: infinite;
+    
+}
+
+#undoButton{
+    background-color: red;
+}
+
+#clearButton{
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes rainbow-bg{
+    100%,0%{
+        background-color: rgb(255,0,0);
+    }
+    8%{
+        background-color: rgb(255,127,0);
+    }
+    16%{
+        background-color: rgb(255,255,0);
+    }
+    25%{
+        background-color: rgb(127,255,0);
+    }
+    33%{
+        background-color: rgb(0,255,0);
+    }
+    41%{
+        background-color: rgb(0,255,127);
+    }
+    50%{
+        background-color: rgb(0,255,255);
+    }
+    58%{
+        background-color: rgb(0,127,255);
+    }
+    66%{
+        background-color: rgb(0,0,255);
+    }
+    75%{
+        background-color: rgb(127,0,255);
+    }
+    83%{
+        background-color: rgb(255,0,255);
+    }
+    91%{
+        background-color: rgb(255,0,127);
+    }
 }
