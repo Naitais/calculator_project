@@ -1,0 +1,11 @@
+-aumentar tamaño de los numeros, ver que tamaño queda mejor
+
+-mejorar el fondo, hacer algo mas interesante quizas con patrones
+
+-ver que onda si agrego algun texto en la calculadora
+
+-revisar si poner la botonera mas abajo o que hacer con el espacio extra
+
+-ver como "doblar" una seccion de un div
+
+
