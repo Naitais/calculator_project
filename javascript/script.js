@@ -6,6 +6,16 @@ let firstRowButtons=document.getElementById("firstRowButtons");
 let zeroButton=document.getElementById("zeroButton");
 let displayCon=document.getElementById("displayCon");
 let lautiSound=document.getElementById("lautiSound");
+let theRock=document.getElementById("theRock");
+let memeThree=document.getElementById("memeThree");
+let memeFour=document.getElementById("memeFour");
+
+const getMemeSound = ()=>{
+    const sounds=[lautiSound, theRock, memeFour, memeThree]
+    let sound = sounds[Math.floor(Math.random()*sounds.length)];
+    return sound;
+
+}
 
 const numberList=document.createElement("ul");
 displayCon.append(numberList);
@@ -109,8 +119,8 @@ for(let i=0;i<anyButton.length;i++){
         }else if(e.target.id==="memeButton"){
             memeButton.style.borderBottom="none";
             memeButton.style.borderRight="none";
-            lautiSound.currentTime=0;
-            lautiSound.play();
+            getMemeSound().currentTime=0;
+            getMemeSound().play()
             
         }
 
