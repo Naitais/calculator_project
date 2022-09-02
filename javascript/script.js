@@ -101,13 +101,13 @@ for(let i=0;i<anyButton.length;i++){
             clearConsole()
 
         }else if(e.target.id==="undoButton"){
-            clearButton.style.borderBottom="none";
-            clearButton.style.borderRight="none";
+            undoButton.style.borderBottom="none";
+            undoButton.style.borderRight="none";
             numberList.removeChild(numberList.lastChild)
 
         }else if(e.target.id==="memeButton"){
-            clearButton.style.borderBottom="none";
-            clearButton.style.borderRight="none";
+            memeButton.style.borderBottom="none";
+            memeButton.style.borderRight="none";
             
         }
 

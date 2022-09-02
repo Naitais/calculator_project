@@ -11,7 +11,7 @@ html,body{
     align-items: center;
     flex-direction: column;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 40px;
     justify-content: center;
 }
 
@@ -76,6 +76,7 @@ ul{
     border-radius: 10px;
     color: lavender;
     background-color: royalblue;
+    
     
 }
 
