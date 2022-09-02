@@ -5,13 +5,12 @@ let memeButton=document.getElementById("memeButton");
 let firstRowButtons=document.getElementById("firstRowButtons");
 let zeroButton=document.getElementById("zeroButton");
 let displayCon=document.getElementById("displayCon");
-let lautiSound=document.getElementById("lautiSound");
-let theRock=document.getElementById("theRock");
-let memeThree=document.getElementById("memeThree");
-let memeFour=document.getElementById("memeFour");
+
+
 
 const getMemeSound = ()=>{
-    const sounds=[lautiSound, theRock, memeFour, memeThree]
+    const sounds=[lautiSound, theRock, memeFour, memeThree, memeFive, memeSix,
+    memeSeven, memeEight, memeNine, memeTen, memeEleven, memeTwelve]
     let sound = sounds[Math.floor(Math.random()*sounds.length)];
     return sound;
 
