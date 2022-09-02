@@ -27,13 +27,13 @@ html,body{
     border-bottom-right-radius: 5px;
     border-top-left-radius: 5px;
 
+    
     border-right: 8px solid midnightblue;
     border-bottom: 8px solid midnightblue;
 
     box-shadow: 5px 5px 10px
                 rgba(0, 0, 0, 0.4);
-    
-    
+
 }
 
 #displayCon{
@@ -41,29 +41,31 @@ html,body{
     background-color: rgb(227, 227, 227);
     height: 150px;
     margin: 25px 25px 20px 25px;
-    border: solid black 2px;
+    border: solid midnightblue 2px;
 
     box-shadow: inset 0px 0px 5px;
 
+}
+h2{
+    pointer-events:none;
+}
+.idleButton{
+    border-right: 6px solid midnightblue;
+    border-bottom: 6px solid midnightblue;
+    box-shadow: 5px 5px 5px
+    rgba(0, 0, 0, 0.3);
+}
+
+.clickedButton{
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0);
 }
 
 .button{
     height: 60px;
     width: 85px;
     border-radius: 10px;
-    color: white;
+    color: lavender;
     background-color: royalblue;
-    box-shadow: 5px 5px 5px
-                rgba(0, 0, 0, 0.3);
-    
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 6px;
-
-    
-    border-right: 6px solid midnightblue;
-    border-bottom: 6px solid midnightblue;
     
 }
 
@@ -81,7 +83,7 @@ html,body{
 }
 
 #memeButton{
-    color: aliceblue;
+    color: lavender;
     text-align: center;
     animation: rainbow-bg 4s linear;
 	animation-iteration-count: infinite;
@@ -92,14 +94,14 @@ html,body{
 
 #undoButton{
     background-color: midnightblue;
-
+    color: lavender;
     border-right: 6px solid black;
     border-bottom: 6px solid black;
 }
 
 #clearButton{
     background-color: lavender;
-    color: black;
+    color: midnightblue;
 
     border-right: 6px solid rgb(120, 119, 119);
     border-bottom: 6px solid rgb(120, 119, 119);
