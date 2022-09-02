@@ -96,15 +96,18 @@ for(let i=0;i<anyButton.length;i++){
             newNumber.textContent=".";
 
         }else if(e.target.id==="clearButton"){
-            clearButton.style.border="none";
+            clearButton.style.borderBottom="none";
+            clearButton.style.borderRight="none";
             clearConsole()
 
         }else if(e.target.id==="undoButton"){
-            undoButton.style.border="none";
+            clearButton.style.borderBottom="none";
+            clearButton.style.borderRight="none";
             numberList.removeChild(numberList.lastChild)
 
         }else if(e.target.id==="memeButton"){
-            memeButton.style.border="none";
+            clearButton.style.borderBottom="none";
+            clearButton.style.borderRight="none";
             
         }
 
