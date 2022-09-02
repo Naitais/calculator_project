@@ -109,6 +109,7 @@ for(let i=0;i<anyButton.length;i++){
         }else if(e.target.id==="memeButton"){
             memeButton.style.borderBottom="none";
             memeButton.style.borderRight="none";
+            lautiSound.currentTime=0;
             lautiSound.play();
             
         }
