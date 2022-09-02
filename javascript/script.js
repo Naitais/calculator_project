@@ -5,6 +5,7 @@ let memeButton=document.getElementById("memeButton");
 let firstRowButtons=document.getElementById("firstRowButtons");
 let zeroButton=document.getElementById("zeroButton");
 let displayCon=document.getElementById("displayCon");
+let lautiSound=document.getElementById("lautiSound");
 
 const numberList=document.createElement("ul");
 displayCon.append(numberList);
@@ -108,6 +109,7 @@ for(let i=0;i<anyButton.length;i++){
         }else if(e.target.id==="memeButton"){
             memeButton.style.borderBottom="none";
             memeButton.style.borderRight="none";
+            lautiSound.play();
             
         }
 
