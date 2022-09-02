@@ -136,39 +136,8 @@ for(let i=0;i<anyButton.length;i++){
 
         }else if(e.target.id === "memeButton"){
             
-            memeButton.style.borderRight="6px solid rgb(60, 50, 69)";
-            memeButton.style.borderBottom="6px solid rgb(60, 50, 69)";
+            memeButton.style.borderRight="6px solid rgb(60, 50, 69, .6)";
+            memeButton.style.borderBottom="6px solid rgb(60, 50, 69, .6)";
         }
     });
 }
-
-/*const pushOtherBtns=()=>{
-    
-    firstRowButtons.addEventListener("click", (e)=>{
-        e.stopPropagation
-        if(e.target.id === "undoButton"||"clearButton"||"memeButton"){
-            
-        }
-    });
-    
-    firstRowButtons.addEventListener("mouseout", (e)=>{
-        e.stopPropagation
-        if(e.target.id === "undoButton"){
-            undoButton.style.borderRight="6px solid black";
-            undoButton.style.borderBottom="6px solid black";
-
-        }else if(e.target.id === "clearButton"){
-            console.log(e.target.id);
-            undoButton.style.borderRight="6px solid rgb(120, 119, 119)";
-            undoButton.style.borderBottom="6px solid rgb(120, 119, 119)";
-
-        }else if(e.target.id === "memeButton"){
-            console.log(e.target.id);
-            undoButton.style.borderRight="6px solid rgb(60, 50, 69)";
-            undoButton.style.borderBottom="6px solid rgb(60, 50, 69)";
-        }
-    });
-}
-pushOtherBtns() */
-
-
