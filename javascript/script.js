@@ -26,7 +26,7 @@ const clearConsole = ()=>{
 }
 
 for(let i=0;i<anyButton.length;i++){
-    anyButton[i].addEventListener("click", (e)=>{
+    anyButton[i].addEventListener("touchstart", (e)=>{
         
         e.target.classList.remove("idleButton");
         e.target.classList.add("clickedButton");
@@ -132,7 +132,7 @@ for(let i=0;i<anyButton.length;i++){
             
         
     });
-    anyButton[i].addEventListener("mouseout", (e)=>{
+    anyButton[i].addEventListener("touchend", (e)=>{
         
         e.target.classList.remove("clickedButton");
         e.target.classList.add("idleButton");
