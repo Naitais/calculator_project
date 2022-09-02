@@ -11,7 +11,7 @@ html,body{
     align-items: center;
     flex-direction: column;
     font-family: sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     justify-content: center;
 }
 
@@ -42,13 +42,23 @@ html,body{
     height: 150px;
     margin: 25px 25px 20px 25px;
     border: solid midnightblue 2px;
-
     box-shadow: inset 0px 0px 5px;
-
 }
 h2{
     pointer-events:none;
 }
+
+ul{
+    
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    list-style: none;
+    flex-wrap: wrap;
+    
+    margin: 0px 5px 0px -40px;
+}
+
 .idleButton{
     border-right: 6px solid midnightblue;
     border-bottom: 6px solid midnightblue;
@@ -70,7 +80,7 @@ h2{
 }
 
 #zeroButton{
-    width: 180px;
+    width: 175px;
  
 }
 
