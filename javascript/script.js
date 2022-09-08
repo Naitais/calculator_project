@@ -13,7 +13,7 @@ const getMemeSound = ()=>{
     return sound;
 }
 
-/*CREAR OBJETO QUE ALMACENE operator, numeros etc*/
+/**/
 let numbers=[];
 let operator;
 const operation=(operator)=>{
@@ -21,25 +21,41 @@ const operation=(operator)=>{
         console.log(operator);
         
 }
-
-
-const getNumbers=(array)=>{
-    //gets first number to operate
-    
-        if (a==="churros") {
-            console.log(a);
-            console.log("a no existe, creando a...");
+getA=(array)=>{
+    //creates number A
+    console.log("a no existe, creando a...");
             a = [];
             a.push(numbers);
             a=parseInt(array.join(""))
             console.log(a);
             numbers.length=0;
-        }else if(a!=="churros"){
-            //gets second number to operate
-            console.log("a ya existe");
-            console.log(a);
+            cont+=1
+            console.log(cont);
+}
+getB=(array)=>{
+    //creates B but only if I press "+" again.
+    //need to make "=" create B and then
+    //make "=" trigger an operation and show results
+    console.log("a ya existe pero b no existe, creando b...");
+            b = [];
+            b.push(numbers);
+            b=parseInt(array.join(""))
+            console.log(b);
+            numbers.length=0;
+            cont+=1
+            console.log("contador: "+cont);
+}
+let cont=0;
+const getNumbers=(array)=>{
+    
+    
+        if (cont===0) {
+            getA(array)
+            
+        }else if(cont===1){
+            
+            getB(array)
         }
-        
 }
 
 
@@ -178,7 +194,7 @@ const getUserInput=()=>{
                 numberList.append(newNumber);
                 newNumber.textContent="+";
                 operator="sum";
-                
+                getNumbers(numbers)
                 return operator;
 
             }else if(e.target.id==="dot"){
@@ -204,7 +220,7 @@ const getUserInput=()=>{
                 getMemeSound().currentTime=0;
                 getMemeSound().play()
             }else if(e.target.id==="equal"){
-                getNumbers(numbers)
+                cont=0;
                 
                 
             }     
