@@ -16,51 +16,36 @@ const getMemeSound = ()=>{
 /**/
 let numbers=[];
 let operator;
+let result=[];
+let a=[];
+let b=[];
 const operation=(operator)=>{
-    if(operator==="sum")
-        console.log(operator);
-        
 }
+const sum=()=>{
+    return result.reduce((accumulator, num)=>{
+        return console.log(accumulator+num); 
+    }, 0);
+}
+
+
+
+
 getA=(array)=>{
-    //creates number A
-    console.log("a no existe, creando a...");
-            a = [];
-            a.push(numbers);
-            a=parseInt(array.join(""))
-            console.log(a);
-            numbers.length=0;
-            cont+=1
-            console.log(cont);
+    //creates number A when pressing any operator
+            a= Array.from(array);
+            result.push(Number(a.join("")));
+            console.log("result: "+result);
+            return a;
+            
 }
 getB=(array)=>{
-    //creates B but only if I press "+" again.
-    //need to make "=" create B and then
-    //make "=" trigger an operation and show results
-    console.log("a ya existe pero b no existe, creando b...");
-            b = [];
-            b.push(numbers);
-            b=parseInt(array.join(""))
-            console.log(b);
-            numbers.length=0;
-            cont+=1
-            console.log("contador: "+cont);
+    //creates B when pressing "="
+            b= Array.from(array);
+            result.push(Number(b.join("")));
+            console.log("result: "+result);
+            return b;
+                   
 }
-let cont=0;
-const getNumbers=(array)=>{
-    
-    
-        if (cont===0) {
-            getA(array)
-            
-        }else if(cont===1){
-            
-            getB(array)
-        }
-}
-
-
-
-
 
 const numberList=document.createElement("ul");
 displayCon.append(numberList);
@@ -69,7 +54,6 @@ const clearConsole = ()=>{
     while(numberList.firstChild){
         numberList.removeChild(numberList.firstChild);
     }
-
 }
 
 const getUserInput=()=>{
@@ -88,9 +72,7 @@ const getUserInput=()=>{
                 numberList.append(newNumber);
                 newNumber.textContent=0;
                 number=0;
-                
                 numbers.push(number);
-                
                 console.log(numbers);
                 return number;
 
@@ -99,9 +81,7 @@ const getUserInput=()=>{
                 numberList.append(newNumber);
                 newNumber.textContent=1;
                 number=1;
-                
                 numbers.push(number);
-                  
                 return number;
                 
             }else if(e.target.id==="two"){
@@ -173,6 +153,7 @@ const getUserInput=()=>{
                 numberList.append(newNumber);
                 newNumber.textContent="*";
                 operator="multiplication";
+                getA(numbers)
                 return operator;
 
             }else if(e.target.id==="divide"){
@@ -180,6 +161,7 @@ const getUserInput=()=>{
                 numberList.append(newNumber);
                 newNumber.textContent="/";
                 operator="division";
+                getA(numbers)
                 return operator;
 
             }else if(e.target.id==="minus"){
@@ -187,6 +169,7 @@ const getUserInput=()=>{
                 numberList.append(newNumber);
                 newNumber.textContent="-";
                 operator="reduction";
+                getA(numbers)
                 return operator;
 
             }else if(e.target.id==="sum"){
@@ -194,7 +177,8 @@ const getUserInput=()=>{
                 numberList.append(newNumber);
                 newNumber.textContent="+";
                 operator="sum";
-                getNumbers(numbers)
+                getA(numbers)
+                numbers.length=0;
                 return operator;
 
             }else if(e.target.id==="dot"){
@@ -220,8 +204,11 @@ const getUserInput=()=>{
                 getMemeSound().currentTime=0;
                 getMemeSound().play()
             }else if(e.target.id==="equal"){
-                cont=0;
                 
+                getB(numbers)
+                numbers.length=0;
+                sum(result)
+               
                 
             }     
             
