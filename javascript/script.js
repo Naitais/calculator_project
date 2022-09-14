@@ -46,7 +46,9 @@ class Calculator{
                 computation=prev-current
                 break
             case "/":
-                computation=prev/current
+                if(prev===0 || current===0)alert("Error, cannot divide by 0.")
+                else computation=prev/current
+                
                 break
             case "*":
                 computation=prev*current
