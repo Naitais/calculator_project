@@ -12,36 +12,38 @@
     <div id="mainDiv">
         <div id="bottomTextCon">Naitais Calculator</div>
         <div id="displayCon">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
         </div>
         <div id="buttonsCon">
             <div id="firstRowButtons">
-                <button id="undoButton" class="button idleButton"><h2>UNDO</h2></button>
-                <button id="clearButton" class="button idleButton"><h2>C</h2></button>
-                <button id="memeButton" class="button idleButton"><h2>MEME</h2></button>
-                <button id="divide" class="button idleButton"><h2>/</h2></button>
+                <button data-undoButton id="undoButton" class="button idleButton"><h2>UNDO</h2></button>
+                <button data-clearButton id="clearButton" class="button idleButton"><h2>C</h2></button>
+                <button data-memeButton id="memeButton" class="button idleButton"><h2>MEME</h2></button>
+                <button data-operator id="divide" class="button idleButton"><h2>/</h2></button>
             </div>
             <div id="secondRowButtons">
-                <button id="seven" class="button idleButton"><h2>7</h2></button>
-                <button id="eight" class="button idleButton"><h2>8</h2></button>
-                <button id="nine" class="button idleButton"><h2>9</h2></button>
-                <button id="mult" class="button idleButton"><h2>*</h2></button>
+                <button data-number id="seven" class="button idleButton"><h2>7</h2></button>
+                <button data-number id="eight" class="button idleButton"><h2>8</h2></button>
+                <button data-number id="nine" class="button idleButton"><h2>9</h2></button>
+                <button data-operator id="mult" class="button idleButton"><h2>*</h2></button>
             </div>
             <div id="thirdRowButtons">
-                <button id="four" class="button idleButton"><h2>4</h2></button>
-                <button id="five" class="button idleButton"><h2>5</h2></button>
-                <button id="six" class="button idleButton"><h2>6</h2></button>
-                <button id="minus" class="button idleButton"><h2>-</h2></button>
+                <button data-number id="four" class="button idleButton"><h2>4</h2></button>
+                <button data-number id="five" class="button idleButton"><h2>5</h2></button>
+                <button data-number id="six" class="button idleButton"><h2>6</h2></button>
+                <button data-operator id="minus" class="button idleButton"><h2>-</h2></button>
             </div>
             <div id="fourthRowButtons">
-                <button id="one" class="button idleButton"><h2>1</h2></button>
-                <button id="two" class="button idleButton"><h2>2</h2></button>
-                <button id="three" class="button idleButton"><h2>3</h2></button>
-                <button id="sum" class="button idleButton"><h2>+</h2></button>
+                <button data-number id="one" class="button idleButton"><h2>1</h2></button>
+                <button data-number id="two" class="button idleButton"><h2>2</h2></button>
+                <button data-number id="three" class="button idleButton"><h2>3</h2></button>
+                <button data-operator id="sum" class="button idleButton"><h2>+</h2></button>
             </div>
             <div id="fifthRowButtons">
-                <button id="zeroButton" class="button idleButton"><h2>0</h2></button>
-                    <button id="dot" class="button idleButton"><h2>.</h2></button>
-                    <button id="equal" class="button idleButton"><h2>=</h2></button>
+                <button data-number id="zeroButton" class="button idleButton"><h2>0</h2></button>
+                    <button data-number id="dot" class="button idleButton"><h2>.</h2></button>
+                    <button data-equal id="equal" class="button idleButton"><h2>=</h2></button>
                 
             </div>
         </div>

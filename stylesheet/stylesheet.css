@@ -13,10 +13,11 @@ html,body{
     font-family: sans-serif;
     font-size: 40px;
     justify-content: center;
+    flex: 1 1 1;
 }
 
 #mainDiv{
-    height: 600px;
+    height: 700px;
     width: 400px;
     background-color: lightskyblue;
     display: flex;
@@ -39,24 +40,23 @@ html,body{
 #displayCon{
     border-radius: 5px;
     background-color: rgb(227, 227, 227);
-    height: 150px;
+    height: min(200px, 400px);
     margin: 25px 25px 20px 25px;
     border: solid midnightblue 2px;
     box-shadow: inset 0px 0px 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    gap: 20px;
+    font-size: 40px;
 }
 h2{
     pointer-events:none;
-}
-
-ul{
-    
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    list-style: none;
-    flex-wrap: wrap;
-    
-    margin: 0px 5px 0px -40px;
 }
 
 .idleButton{
@@ -90,6 +90,7 @@ ul{
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    padding-bottom: 50px;
     
 }
 
