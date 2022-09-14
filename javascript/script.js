@@ -14,7 +14,7 @@ class Calculator{
     }
     getMemeSound = ()=>{
         const sounds=[lautiSound, theRock, memeFour, memeThree, memeFive, memeSix,
-        memeSeven, memeEight, memeNine, memeTen, memeEleven, memeTwelve]
+        memeSeven,tacoBell, memeEight, memeNine, memeTen, memeEleven, memeTwelve]
         let sound = sounds[Math.floor(Math.random()*sounds.length)];
         return sound;
         }
@@ -78,6 +78,9 @@ const previousOperandText=document.querySelector("[data-previous-operand");
 const currentOperandText=document.querySelector("[data-current-operand]");
 const anyButton=document.getElementsByTagName("button");
 
+const McPop=document.getElementById("McPop");
+const tacoBell=document.getElementById("tacoBell");
+
 
 const calculator=new Calculator(currentOperandText, previousOperandText)
 
@@ -85,6 +88,7 @@ numberButtons.forEach(button=>{
     button.addEventListener("touchstart",(e)=>{
     calculator.getNumber(button.innerText)
     calculator.updateDisplay()
+
     })
 })
 
@@ -92,6 +96,7 @@ operators.forEach(button=>{
     button.addEventListener("touchstart",(e)=>{
     calculator.getOperation(button.innerText)
     calculator.updateDisplay()
+    
     })
 })
 
@@ -110,12 +115,14 @@ undoButton.addEventListener("touchstart", ()=>{
     calculator.updateDisplay()
 })
 
-//following code is for buttons animation when pressed
+//following code is for buttons animation or sounds when pressed
 for(let i=0;i<anyButton.length;i++){
     anyButton[i].addEventListener("touchstart", (e)=>{
         
         e.target.classList.remove("idleButton");
         e.target.classList.add("clickedButton");
+        currentTime=0;
+        McPop.play()
 
         if(e.target.id==="clearButton"){
             clearButton.style.borderBottom="none";
