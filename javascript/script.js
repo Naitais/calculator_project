@@ -64,31 +64,6 @@ class Calculator{
         this.currentOperandText.innerText = this.currentOperand
         this.previousOperandText.innerText = this.previousOperand
     }
-
-    touchEndAnimation(buttonType){
-        buttonType.forEach(button=>{
-            button.addEventListener("touchend",(e)=>{
-                //adds button animation
-                e.target.classList.remove("clickedButton");
-                e.target.classList.add("idleButton");
-
-                if(e.target.id === "undoButton"){
-                    undoButton.style.borderRight="6px solid black";
-                    undoButton.style.borderBottom="6px solid black";
-    
-                }else if(e.target.id === "clearButton"){
-                    
-                    clearButton.style.borderRight="6px solid rgb(120, 119, 119)";
-                    clearButton.style.borderBottom="6px solid rgb(120, 119, 119)";
-    
-                }else if(e.target.id === "memeButton"){
-                    
-                    memeButton.style.borderRight="6px solid rgb(60, 50, 69, .6)";
-                    memeButton.style.borderBottom="6px solid rgb(60, 50, 69, .6)";
-                }
-            })
-        })
-    }
 }
 
 const numberButtons=document.querySelectorAll("[data-number]");
@@ -106,17 +81,15 @@ const calculator=new Calculator(currentOperandText, previousOperandText)
 
 numberButtons.forEach(button=>{
     button.addEventListener("touchstart",(e)=>{
-        calculator.getNumber(button.innerText)
-        calculator.updateDisplay()
-
-        calculator.touchEndAnimation(numberButtons)
+    calculator.getNumber(button.innerText)
+    calculator.updateDisplay()
     })
 })
 
 operators.forEach(button=>{
     button.addEventListener("touchstart",(e)=>{
-        calculator.getOperation(button.innerText)
-        calculator.updateDisplay()
+    calculator.getOperation(button.innerText)
+    calculator.updateDisplay()
     })
 })
 
@@ -178,170 +151,5 @@ for(let i=0;i<anyButton.length;i++){
             memeButton.style.borderRight="6px solid rgb(60, 50, 69, .6)";
             memeButton.style.borderBottom="6px solid rgb(60, 50, 69, .6)";
         }
-        
     });
-     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*let anyButton= document.getElementsByTagName("button");
-let undoButton=document.getElementById("undoButton");
-let clearButton=document.getElementById("clearButton");
-let memeButton=document.getElementById("memeButton");
-let firstRowButtons=document.getElementById("firstRowButtons");
-let zeroButton=document.getElementById("zeroButton");
-let displayCon=document.getElementById("displayCon");
-const numberList=document.createElement("ul");
-displayCon.append(numberList);*/
-
-/*
-class Calculator{
-    constructor(numbers, result){
-        this.numbers=numbers;
-        this.result=result;
-    }
-    getMemeSound = ()=>{
-    const sounds=[lautiSound, theRock, memeFour, memeThree, memeFive, memeSix,
-    memeSeven, memeEight, memeNine, memeTen, memeEleven, memeTwelve]
-    let sound = sounds[Math.floor(Math.random()*sounds.length)];
-    return sound;
-    }
-    clearConsole = ()=>{
-        while(numberList.firstChild){
-            numberList.removeChild(numberList.firstChild);
-        }
-    }
-    getUserInput=()=>{
-    
-        let number;
-        
-        let symbol;
-        for(let i=0;i<anyButton.length;i++){
-            anyButton[i].addEventListener("touchstart", (e)=>{
-                
-                e.target.classList.remove("idleButton");
-                e.target.classList.add("clickedButton");
-    
-                }else if(e.target.id==="clearButton"){
-                    clearButton.style.borderBottom="none";
-                    clearButton.style.borderRight="none";
-                    clearConsole()
-    
-                }else if(e.target.id==="undoButton"){
-                    undoButton.style.borderBottom="none";
-                    undoButton.style.borderRight="none";
-                    numberList.removeChild(numberList.lastChild)
-    
-                }else if(e.target.id==="memeButton"){
-                    memeButton.style.borderBottom="none";
-                    memeButton.style.borderRight="none";
-                    getMemeSound().currentTime=0;
-                    getMemeSound().play()
-                }else if(e.target.id==="equal"){
-                    
-                    getB(numbers)
-                    numbers.length=0;
-                    sum(result)
-                   
-                    
-                }     
-                
-            });
-            anyButton[i].addEventListener("touchend", (e)=>{
-                
-                e.target.classList.remove("clickedButton");
-                e.target.classList.add("idleButton");
-    
-                if(e.target.id === "undoButton"){
-                    undoButton.style.borderRight="6px solid black";
-                    undoButton.style.borderBottom="6px solid black";
-    
-                }else if(e.target.id === "clearButton"){
-                    
-                    clearButton.style.borderRight="6px solid rgb(120, 119, 119)";
-                    clearButton.style.borderBottom="6px solid rgb(120, 119, 119)";
-    
-                }else if(e.target.id === "memeButton"){
-                    
-                    memeButton.style.borderRight="6px solid rgb(60, 50, 69, .6)";
-                    memeButton.style.borderBottom="6px solid rgb(60, 50, 69, .6)";
-                }
-                
-            });
-             
-        }
-        
-        
-    }
-
-}
-
-
-
-
-let numbers=[];
-let operator;
-let result=[];
-
-const operation=(operator)=>{
-}
-const sum=()=>{
-    return result.reduce((accumulator, num)=>{
-        return console.log(accumulator+num); 
-    }, 0);
-}
-
-
-
-
-getA=(array)=>{
-    //creates number A when pressing any operator
-            a= Array.from(array);
-            result.push(Number(a.join("")));
-            console.log("result: "+result);
-            return a;
-            
-}
-getB=(array)=>{
-    //creates B when pressing "="
-            b= Array.from(array);
-            result.push(Number(b.join("")));
-            console.log("result: "+result);
-            return b;
-                   
-}
-
-
-
-
-
-
-
-
-operation()
-getUserInput()
-
-*/
