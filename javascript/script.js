@@ -108,7 +108,7 @@ undoButton.addEventListener("touchstart", ()=>{
     calculator.updateDisplay()
 })
 
-
+//following code is for buttons animation when pressed
 for(let i=0;i<anyButton.length;i++){
     anyButton[i].addEventListener("touchstart", (e)=>{
         
