@@ -1,2 +1,2 @@
 # calculator_project
-just a calculator
+just a calculator (currently works only for smartphones)
